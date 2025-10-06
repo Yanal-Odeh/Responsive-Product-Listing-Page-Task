@@ -1,0 +1,78 @@
+$background-color: rgb(226, 230, 230);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: $background-color;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    margin-top: 1rem;
+    height: 3rem;
+  }
+}
+
+main {
+  .viewProducts {
+    display: flex;
+    justify-content: space-between;
+    svg {
+      margin-left: 0.5rem;
+    }
+    button {
+      margin-right: 0.5rem;
+      padding: 10px;
+      border-radius: 10px;
+      color: white;
+      background-color: black;
+    }
+    button:hover {
+      cursor: pointer;
+      background-color: grey;
+    }
+  }
+  .fav {
+    width: fit-content;
+  }
+  .card {
+    margin: 0.5rem;
+    .card-text {
+      display: none;
+    }
+  }
+  svg {
+    height: 2rem;
+  }
+  svg:hover {
+    cursor: pointer;
+  }
+}
+.products.is-list .card-group {
+  display: block;
+} /* break out of equal-height groups */
+.products.is-list .card {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.products.is-list .card-img-top {
+  width: 180px; /* adjust as you like */
+  height: auto;
+  object-fit: cover;
+}
+.products.is-list .card-body {
+  flex: 1;
+}
+.products.is-list .card .card-text {
+  display: block;
+} /* show the long description in list */
