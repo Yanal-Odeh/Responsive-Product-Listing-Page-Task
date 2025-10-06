@@ -42,12 +42,31 @@ main {
   }
   .fav {
     width: fit-content;
+    position: absolute;
+    top: 5px;
+    left: 10px;
   }
   .card {
-    margin: 0.5rem;
+    margin-top: 1rem;
+    max-width: 490px;
     .card-text {
       display: none;
     }
+    .card-footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+    }
+    button{
+      padding: 10px;
+      border-radius: 10px;
+      color: white;
+      background-color: green;
+      width: 9rem;
+     
+    }
+    
   }
   svg {
     height: 2rem;
@@ -61,8 +80,10 @@ main {
 } /* break out of equal-height groups */
 .products.is-list .card {
   display: flex;
+  flex-direction: row;
   gap: 1rem;
   width: 100%;
+  max-width: 100%;
   margin-bottom: 1rem;
 }
 .products.is-list .card-img-top {
@@ -88,4 +109,5 @@ main {
     display: grid;
     grid-template-columns: repeat(1, 1fr) !important; 
     }
+  
 }

@@ -3,10 +3,17 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
 
-    uglify: {
+   uglify: {
       build: {
-        src: "js/index.js",
-        dest: "js/index.min.js",
+        files: [
+          {
+            expand: true,
+            cwd: "js/",              
+            src: ["**/*.js", "!**/*.min.js"], 
+            dest: "js/",             
+            ext: ".min.js",         
+          },
+        ],
       },
     },
     imagemin: {
