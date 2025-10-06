@@ -76,3 +76,16 @@ main {
 .products.is-list .card .card-text {
   display: block;
 } /* show the long description in list */
+
+@media (max-width: 992px) {                   /* 2 on tablets */
+  .card-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important; 
+    }
+}
+@media (max-width: 768px) {                   /* 2 on tablets */
+  .card-group {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important; 
+    }
+}
